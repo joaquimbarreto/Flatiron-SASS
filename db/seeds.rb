@@ -9,72 +9,129 @@ Student.destroy_all
 Tcf.destroy_all
 Cohort.destroy_all
 
-
-students = Student.create([
-    {
-        name: 'Andy Purbrick'
-    },
-    {
-        name: 'Claudia Fox'
-    },
-    {
-        name: 'Holly Atkinson'
-    },
-    {
-        name: 'Ian Harrison'
-    },
-    {
-        name: 'Jack Ling'
-    },
-    {
-        name: 'Janine Luk'
-    },
-    {
-        name: 'Joaquim Barreto'
-    },
-    {
-        name: 'Jody Neckles'
-    },
-    {
-        name: 'Kevin Sutton'
-    },
-    {
-        name: 'Nathan Bell'
-    },
-    {
-        name: 'Serena Nakatani-Brown'
-    },
-    {
-        name: 'Tom Rowson'
-    },
-    {
-        name: 'Valeria Ragonese'
-    },
-    {
-        name: 'Paul Clark'
-    }
-])
-
-tcfs = Tcf.create([
-    {
-        name: 'Guy Bennett-Jones'
-    },
-    {
-        name: 'Vasile Cojusco'
-    },
-    {
-        name: 'Wachira'
-    },
-    {
-        name: 'Alice'
-    },
-])
-
-cohorts = Cohort.create([
+cohorts = Cohort.create!([
     {
         name: 'git-commit-suicide'
     },
     {
         name: 'git-some'
     }
+])
+
+students = Student.create!([
+    {
+        name: 'Andy Purbrick',
+        cohort_id: 1
+    },
+    {
+        name: 'Claudia Fo',
+        cohort_id: 1
+    },
+    {
+        name: 'Holly Atkinson',
+        cohort_id: 1
+    },
+    {
+        name: 'Ian Harrison',
+        cohort_id: 1
+    },
+    {
+        name: 'Jack Ling',
+        cohort_id: 1
+    },
+    {
+        name: 'Janine Lu',
+        cohort_id: 1
+    },
+    {
+        name: 'Joaquim Barret',
+        cohort_id: 1
+    },
+    {
+        name: 'Jody Neckles',
+        cohort_id: 1
+    },
+    {
+        name: 'Kevin Sutton',
+        cohort_id: 1
+    },
+    {
+        name: 'Nathan Bel',
+        cohort_id: 1
+    },
+    {
+        name: 'Serena Nakatan-Brown',
+        cohort_id: 1
+    },
+    {
+        name: 'Tom Rowson',
+        cohort_id: 1
+    },
+    {
+        name: 'Valeria Ragones',
+        cohort_id: 1
+    },
+    {
+        name: 'Paul Clark',
+        cohort_id: 2
+    },
+    {
+        name: 'Arti',
+        cohort_id: 2
+    },
+    {
+        name: 'Cristian',
+        cohort_id: 2
+    },
+    {
+        name: 'Paolo',
+        cohort_id: 2
+    },
+    {
+        name: 'Mayowa',
+        cohort_id: 2
+    },
+    {
+        name: 'Susanne',
+        cohort_id: 2
+    },
+    {
+        name: 'Chris',
+        cohort_id: 2
+    },
+    {
+        name: 'Damany',
+        cohort_id: 2
+    },
+    {
+        name: 'Rosen',
+        cohort_id: 2
+    },
+    {
+        name: 'Romen',
+        cohort_id: 2
+    },
+    {
+        name: 'Kenan',
+        cohort_id: 2
+    }
+])
+
+tcfs = Tcf.create!([
+    {
+        name: 'Guy Bennett-Jones',
+        cohort_id: 1
+    },
+    {
+        name: 'Vasile Cojusco',
+        cohort_id: 1
+    },
+    {
+        name: 'Wachira',
+        cohort_id: 2
+    },
+    {
+        name: 'Alice',
+        cohort_id: 2
+    },
 ])
