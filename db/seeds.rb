@@ -25,7 +25,7 @@ students = Student.create([
         cohort_id: 1
     },
     {
-        name: 'Claudia Fo',
+        name: 'Claudia Fox',
         cohort_id: 1
     },
     {
@@ -41,7 +41,7 @@ students = Student.create([
         cohort_id: 1
     },
     {
-        name: 'Janine Lu',
+        name: 'Janine Luk',
         cohort_id: 1
     },
     {
@@ -61,7 +61,7 @@ students = Student.create([
         cohort_id: 1
     },
     {
-        name: 'Serena Nakatan-Brown',
+        name: 'Serena Nakatani-Brown',
         cohort_id: 1
     },
     {
@@ -69,7 +69,7 @@ students = Student.create([
         cohort_id: 1
     },
     {
-        name: 'Valeria Ragones',
+        name: 'Valeria Ragonese',
         cohort_id: 1
     },
     {
@@ -77,7 +77,7 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Arti',
+        name: 'Arti Smarti',
         cohort_id: 2
     },
     {
@@ -85,11 +85,11 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Paolo',
+        name: 'Paolo Ventura',
         cohort_id: 2
     },
     {
-        name: 'Mayowa',
+        name: 'Sir Mayowa Adeniyi',
         cohort_id: 2
     },
     {
@@ -101,7 +101,7 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Damany',
+        name: 'Damany Bailey',
         cohort_id: 2
     },
     {
@@ -113,7 +113,7 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Kenan',
+        name: 'Kenan Berker',
         cohort_id: 2
     }
 ])
@@ -140,7 +140,7 @@ tcfs = Tcf.create([
 presences = Presence.create!([
     {
         present: true,
-        late: DateTime.now,
+        late: "",
         date: DateTime.now,
         student_id: 1
     },
@@ -152,7 +152,7 @@ presences = Presence.create!([
     },    
     {
         present: false,
-        late: DateTime.now,
+        late: "",
         date: DateTime.now,
         student_id: 3
     },    
@@ -164,13 +164,13 @@ presences = Presence.create!([
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: "",
         date: DateTime.now,
         student_id: 5
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: "",
         date: DateTime.now,
         student_id: 6
     },    
@@ -182,7 +182,7 @@ presences = Presence.create!([
     },    
     {
         present: false,
-        late: DateTime.now,
+        late: "",
         date: DateTime.now,
         student_id: 8
     },    
@@ -199,8 +199,8 @@ presences = Presence.create!([
         student_id: 10
     },    
     {
-        present: true,
-        late: DateTime.now,
+        present: false,
+        late: "",
         date: DateTime.now,
         student_id: 11
     },    
@@ -212,9 +212,15 @@ presences = Presence.create!([
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: "",
         date: DateTime.now,
         student_id: 13
-    }
+    },
+    {
+        present: true,
+        late: "",
+        date: "2019-01-21",
+        student_id: 1
+    }    
 
 ])
