@@ -8,3 +8,5 @@ cohortDropDownNav.addEventListener('click', getCohort)
 
 
 allPresentButton.addEventListener('click', checkAllPresent)
+allSubmitButton.addEventListener('click', studentPresent)
+

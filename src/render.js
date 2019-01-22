@@ -5,7 +5,7 @@ function renderStudent(student) {
     <td class="student_name">${student.name}</td>
 
     <td>
-        <input data-id="${student.id}" class="present-check" type="checkbox" onClick="checkAllPresent(this)">
+        <input data-id="${student.id}" class="present-check" type="checkbox">
     </td>
 
     <td>

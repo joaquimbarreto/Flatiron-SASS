@@ -6,6 +6,7 @@ const tableDiv = document.querySelector('.table')
 const welcomeDiv = document.querySelector('#welcome')
 const logoDiv = document.querySelector('.navbar-brand')
 const allPresentButton = document.querySelector('#all-present-btn')
+const allSubmitButton = document.querySelector('#all-submit-btn')
 
   
 
