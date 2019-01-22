@@ -5,7 +5,9 @@ const cohortDropDownNav = document.querySelector('#dropdown_cohorts')
 const tableDiv = document.querySelector('.table')
 const welcomeDiv = document.querySelector('#welcome')
 const logoDiv = document.querySelector('.navbar-brand')
+const allPresentButton = document.querySelector('#all-present-btn')
 
+  
 
 function init() {
     dropDownCohorts()
@@ -54,26 +56,6 @@ function getCohortStudents(e) {
 
 
 
-function renderStudent(student) {
-    return `
-    
-    <td class="student_name">${student.name}</td>
-
-    <td>
-        <input data-id="${student.id}" class="present_check" type="checkbox" value="option1">
-    </td>
-
-    <td>
-        <input data-id="${student.id}" class="absent_check" type="checkbox" value="option1">
-    </td>
-
-    <td>
-        <input data-id="${student.id}" class="late_check" type="checkbox" value="option1">
-        <input data-id="${student.id}" class="late_time" type="time" value="Time">
-    </td>
-
-    </li>`
-}
 function dropDownCohorts() {
     getCohortApi()
         .then(data => {
@@ -89,10 +71,20 @@ function dropDownCohorts() {
 
 }
 
+function checkAllPresent(e) {
+    const checkboxes = document.querySelectorAll('.present-check')
+    for(let i=0, n=checkboxes.length;i<n;i++) {
+        checkboxes[i].checked = e;
+      }
+}
 
-document.addEventListener('DOMContentLoaded', init)
-logoDiv.addEventListener('click', hello)
+function toggleAbsentPresent(e) {
+    const rowId = e.target.dataset.id
+    debugger
+    const absent = document.querySelector(`#data-id=${rowId} .absent-check`);
+    const present = document.querySelector(`#data-id=${rowId} .absent-check`);
+    absent.onchange = function() {
+    present.disabled = !!this.checked;
+    };
+}
 
-
-cohortDropDownNav.addEventListener('click', getCohortStudents)
-cohortDropDownNav.addEventListener('click', getCohort)
