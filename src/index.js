@@ -10,9 +10,12 @@ function init() {
     .then(response => response.json())
     .then(data => {
         data.forEach(student =>{
-            const studentEl = document.createElement(li);
+            if (student.cohort_id === 1) {
+            const studentEl = document.createElement('li');
+            studentEl.setAttribute("class", "list-group-item")
             studentEl.innerText = student.name
             studentsUl.appendChild(studentEl)
+        }
         })
     })
 }
