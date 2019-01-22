@@ -1,0 +1,12 @@
+td {
+    position: relative;
+    text-align: center;
+}
+
+.student_name {
+    text-align: left;
+}
+
+td input {
+    display: inline-block;
+}
