@@ -81,7 +81,7 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Cristian',
+        name: 'Cristian Constantinescu',
         cohort_id: 2
     },
     {
@@ -93,7 +93,7 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Susanne',
+        name: 'Susanne Lundkvist',
         cohort_id: 2
     },
     {
@@ -105,11 +105,11 @@ students = Student.create([
         cohort_id: 2
     },
     {
-        name: 'Rosen',
+        name: 'Rosen Toshev',
         cohort_id: 2
     },
     {
-        name: 'Romen',
+        name: 'Romen Reyes-Peschl',
         cohort_id: 2
     },
     {
