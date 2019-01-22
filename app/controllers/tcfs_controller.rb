@@ -2,9 +2,13 @@ class TcfsController < ApplicationController
 
     def index
         @tcfs = Tcf.all
+        render json: @tcfs
+
       end
     
       def show
+        @tcf = TCF.find(params[:id])
+        render json: @tcf
       end
     
       def new

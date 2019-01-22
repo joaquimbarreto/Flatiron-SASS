@@ -8,8 +8,9 @@
 Student.destroy_all
 Tcf.destroy_all
 Cohort.destroy_all
+Presence.destroy_all
 
-cohorts = Cohort.create!([
+cohorts = Cohort.create([
     {
         name: 'git-commit-suicide'
     },
@@ -18,7 +19,7 @@ cohorts = Cohort.create!([
     }
 ])
 
-students = Student.create!([
+students = Student.create([
     {
         name: 'Andy Purbrick',
         cohort_id: 1
@@ -44,7 +45,7 @@ students = Student.create!([
         cohort_id: 1
     },
     {
-        name: 'Joaquim Barret',
+        name: 'Joaquim Barreto',
         cohort_id: 1
     },
     {
@@ -117,7 +118,7 @@ students = Student.create!([
     }
 ])
 
-tcfs = Tcf.create!([
+tcfs = Tcf.create([
     {
         name: 'Guy Bennett-Jones',
         cohort_id: 1
@@ -134,4 +135,86 @@ tcfs = Tcf.create!([
         name: 'Alice',
         cohort_id: 2
     },
+])
+
+presences = Presence.create!([
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 1
+    },
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 2
+    },    
+    {
+        present: false,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 3
+    },    
+    {
+        present: true,  
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 4
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 5
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 6
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 7
+    },    
+    {
+        present: false,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 8
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 9
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 10
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 11
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 12
+    },    
+    {
+        present: true,
+        late: DateTime.now,
+        date: DateTime.now,
+        student_id: 13
+    }
+
 ])
