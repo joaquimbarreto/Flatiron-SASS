@@ -146,13 +146,13 @@ presences = Presence.create!([
     },
     {
         present: true,
-        late: DateTime.now,
+        late: true,
         date: DateTime.now,
         student_id: 2
     },    
     {
         present: false,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 3
     },    
@@ -200,27 +200,21 @@ presences = Presence.create!([
     },    
     {
         present: false,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 11
     },    
     {
         present: true,
-        late: false,
+        late: true,
         date: DateTime.now,
         student_id: 12
     },    
     {
         present: true,
-        late: false,
+        late: true,
         date: DateTime.now,
         student_id: 13
-    },
-    {
-        present: true,
-        late: false,
-        date: "2019-01-21",
-        student_id: 1
-    }    
+    }
 
 ])
