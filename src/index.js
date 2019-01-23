@@ -1,13 +1,14 @@
 const studentsUl = document.querySelector('#students');
-const cohortDiv = document.querySelector('#cohort');
-const studentTableBody = document.querySelector('.table tbody')
-const cohortDropDownNav = document.querySelector('#dropdown_cohorts')
-const tableDiv = document.querySelector('.table')
-const welcomeDiv = document.querySelector('#welcome')
-const logoDiv = document.querySelector('.navbar-brand')
-const allPresentButton = document.querySelector('#all-present-btn')
-const allSubmitButton = document.querySelector('#all-submit-btn')
-const lateTimeEl = document.querySelector('.late-time')
+const cohortNameDiv = document.querySelector('#cohort-name');
+const studentTableBody = document.querySelector('.table tbody');
+const cohortDropDownNav = document.querySelector('#dropdown_cohorts');
+const tableDiv = document.querySelector('.table');
+const welcomeDiv = document.querySelector('#welcome');
+const logoDiv = document.querySelector('.navbar-brand');
+const allPresentButton = document.querySelector('#all-present-btn');
+const allSubmitButton = document.querySelector('#all-submit-btn');
+const lateTimeEl = document.querySelector('.late-time');
+const currentDateEl = document.querySelector('#current-date');
 
 const state = {
     students: [],
@@ -24,7 +25,7 @@ function init() {
 
 function hello() {
     tableDiv.style.display = "none";
-    cohortDiv.innerText = '';
+    cohortNameDiv.innerText = '';
     welcomeDiv.innerHTML = `
     <h1>Welcome to Flatiron</h1>
     <h2>Student Attendance Score Sheet</h2>
@@ -36,7 +37,7 @@ function getCohort(e) {
     .then(data => {
         data.forEach(cohort =>{
             if (cohort.id === parseInt(e.target.dataset.id)) {
-                cohortDiv.innerHTML = `<h2 id="cohort-${cohort.id}">Cohort: ${cohort.name}</h2>`
+                cohortNameDiv.innerHTML = `<h2 id="cohort-${cohort.id}">Cohort: ${cohort.name}</h2><h4>Today's Date: ${new Date().toLocaleDateString()}</h4>`
             }
         })
     })
