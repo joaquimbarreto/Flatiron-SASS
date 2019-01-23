@@ -19,29 +19,13 @@ function getTcfApi() {
     .then(res => res.json())
 }
 
-
-function studentPresent() {
-    const presentChecked = document.querySelectorAll('.present-check')
-    presentChecked.forEach(student => {
-    return updateStudentPresentToApi(student)
-    })
-}
-
-
-function updateStudentPresentToApi(student) {
-    const studentId = parseInt(student.dataset.id)
+function updateStudentPresencesToApi(presence) {
     fetch(presenceUrl, {
         method: 'POST',
         headers: { 
             'Accept': 'application/json',
   			'Content-Type': 'application/json'
          },
-        body: JSON.stringify({
-            student_id: studentId,
-            present: true,
-            late: '',
-            date: "2019-01-05"
-        })
+        body: JSON.stringify(presence)
     }).then(res => res.json())
-
 }

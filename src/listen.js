@@ -7,6 +7,9 @@ cohortDropDownNav.addEventListener('click', getCohortStudents)
 cohortDropDownNav.addEventListener('click', getCohort)
 
 
+
 allPresentButton.addEventListener('click', checkAllPresent)
-allSubmitButton.addEventListener('click', studentPresent)
+allSubmitButton.addEventListener('click', updateAllPresences)
+
+
 
