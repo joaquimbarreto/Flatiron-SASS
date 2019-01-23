@@ -68,6 +68,13 @@ function dropDownCohorts() {
                 dropCohortA.innerText = cohort.name
                 cohortDropDownNav.appendChild(dropCohortA)
             })
+        return cohortDropDownNav.innerHTML += `
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="">Add Cohort</a>
+
+        `    
+
         })
 
 }

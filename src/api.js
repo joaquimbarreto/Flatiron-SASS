@@ -2,7 +2,7 @@ const baseUrl = 'http://localhost:3000';
 const studentUrl = baseUrl + '/students/';
 const cohortUrl = baseUrl + '/cohorts/';
 const tcfUrl = baseUrl + '/tcfs/';
-const presenceUrl = baseUrl + '/presence/';
+const presenceUrl = baseUrl + '/presences/';
 
 function getCohortApi() {
     return fetch(cohortUrl)
@@ -23,8 +23,7 @@ function getTcfApi() {
 function studentPresent() {
     const presentChecked = document.querySelectorAll('.present-check')
     presentChecked.forEach(student => {
-
-        return updateStudentPresentToApi(student)
+    return updateStudentPresentToApi(student)
     })
 }
 
@@ -41,21 +40,8 @@ function updateStudentPresentToApi(student) {
             student_id: studentId,
             present: true,
             late: '',
-            date: "2019-01-01"
+            date: "2019-01-05"
         })
     }).then(res => res.json())
 
-    fetch('http://localhost:3000/presences/', {
-        method: 'POST',
-        headers: { 
-            'Accept': 'application/json',
-  			'Content-Type': 'application/json'
-         },
-        body: JSON.stringify({
-            student_id: 14,
-            present: true,
-            late: '',
-            date: "2019-01-01"
-        })
-    }).then(res => res.json())
 }
