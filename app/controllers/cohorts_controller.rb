@@ -14,6 +14,12 @@ class CohortsController < ApplicationController
       end
     
       def create
+        @cohort = Cohort.new(name: params[:name])
+        if @cohort.save
+          render json: @cohort
+        else
+          render json: {error: "Unable to create cohort."}, status: 400
+        end
       end
     
       def edit
