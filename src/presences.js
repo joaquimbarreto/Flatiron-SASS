@@ -44,6 +44,7 @@ function showPercentages(data) {
     saveStatsToState()
     calPercentage()
     displayPercentage()
+    // tableDiv.querySelector('tfoot').style.display = "none";
 }
 
 

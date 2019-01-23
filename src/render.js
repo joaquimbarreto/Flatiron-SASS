@@ -26,7 +26,7 @@ function renderPercentages(percentage) {
     </td>
 
     <td>
-        <div data-id="${percentage.student_id}" class="absent-data">${Math.ceil(percentage.absentPer)}%</div>
+        <div data-id="${percentage.student_id}" class="absent-data">${Math.floor(percentage.absentPer)}%</div>
     </td>
 
     <td>

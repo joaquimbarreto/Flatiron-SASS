@@ -14,7 +14,7 @@ const state = {
     newPresences: [],
     stats: [],
     percentages: [],
-    selectedCohortId: 2 
+    selectedCohortId: null 
 }
 
 function init() {
@@ -45,6 +45,7 @@ function getCohort(e) {
 function getCohortStudents(e) {
     tableDiv.style.display = "";
     welcomeDiv.innerText = "";
+    state.selectedCohortId = parseInt(e.target.dataset.id)
     getStudentApi()
     .then(data => {
         state.students = data

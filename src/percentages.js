@@ -3,7 +3,7 @@ function saveStatsToState() {
     state.students.forEach(student => {
         const totalSchoolDays = student.presences.length
         const daysPresent = student.presences.filter(days => days.present === true).length
-        const daysAbsent = student.presences.filter(days => days.absent === true).length
+        const daysAbsent = student.presences.filter(days => days.present === false).length
         const daysLate = student.presences.filter(days => days.late === true).length
         
         const studentStat = 
@@ -51,7 +51,4 @@ function displayPercentage() {
         studentTableBody.appendChild(studentEl)
     })     
 }
-
-
-// 5 - Render Present, Absent, Late percentage stats
 
