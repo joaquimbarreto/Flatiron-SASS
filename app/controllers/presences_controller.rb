@@ -14,6 +14,12 @@ class PresencesController < ApplicationController
       end
     
       def create
+        @presence = Presence.new(present: params[:present], late: params[:late], date: params[:date], student_id: params[:student_id])
+        if @presence.save
+          render json: @presence
+        else
+          render json: {error: "Unable to create presence."}, status: 400
+        end
       end
     
       def edit
@@ -21,9 +27,7 @@ class PresencesController < ApplicationController
     
       def update
       end
-    
-      def destroy
-      end
+
     
       private
     
