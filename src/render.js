@@ -15,4 +15,23 @@ function renderStudent(student) {
         <input data-id="${student.id}" name="${student.name}" value="late" class="late-check" type="radio">
     </td>`
     }
-    // <input id="student-${student.id}" data-id="${student.id}" class="late-time" type="time" value="09:16">
+
+
+function renderPercentages(percentage) {
+    return `        
+    <td class="student_name">${percentage.name}</td>
+
+    <td>
+        <div data-id="${percentage.student_id}" class="present-data">${Math.ceil(percentage.presentPer)}%</div>
+    </td>
+
+    <td>
+        <div data-id="${percentage.student_id}" class="absent-data">${Math.ceil(percentage.absentPer)}%</div>
+    </td>
+
+    <td>
+        <div data-id="${percentage.student_id}" class="late-data">${Math.floor(percentage.latePer)}%</div>
+    </td>`
+
+
+}

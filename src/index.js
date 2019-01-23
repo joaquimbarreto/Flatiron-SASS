@@ -11,7 +11,10 @@ const lateTimeEl = document.querySelector('.late-time')
 
 const state = {
     students: [],
-    newPresences: []
+    newPresences: [],
+    stats: [],
+    percentages: [],
+    selectedCohortId: 2 
 }
 
 function init() {
@@ -33,7 +36,7 @@ function getCohort(e) {
     .then(data => {
         data.forEach(cohort =>{
             if (cohort.id === parseInt(e.target.dataset.id)) {
-                cohortDiv.innerHTML = `<h2>Cohort: ${cohort.name}</h2>`
+                cohortDiv.innerHTML = `<h2 id="cohort-${cohort.id}">Cohort: ${cohort.name}</h2>`
             }
         })
     })
@@ -78,15 +81,14 @@ function checkAllPresent(e) {
     for(let i=0, n=presentCheckboxes.length; i<n; i++) {
         presentCheckboxes[i].checked = e;   
     }
-    upl(e)
-    // debugger
+    allStudentsAreChecked()
 }
 
 
-const upl = e => {
+const allStudentsAreChecked = () => {
     let radio = document.querySelectorAll('[type="radio"]')
     let newArray = [...radio]
-    const allPresentChecked = newArray.filter(e => e.checked)
+    const allPresentChecked = newArray.filter(element => element.checked)
 
     allPresentChecked.forEach(student => {
         const id = student.dataset.id
@@ -97,8 +99,6 @@ const upl = e => {
         date: new Date().toLocaleDateString()
         }
         updatePresence(studentPresent)
-        console.log(state.newPresences)
-
     })
 }
 

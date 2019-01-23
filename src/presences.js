@@ -1,7 +1,8 @@
 
 const updatePresence = presence => {
 	state.newPresences = state.newPresences.filter(oldPresence => oldPresence.student_id !== presence.student_id)
-	state.newPresences.push(presence)
+    state.newPresences.push(presence)
+    
 }
 
 document.addEventListener('click', e => {
@@ -33,8 +34,17 @@ document.addEventListener('click', e => {
 
 function updateAllPresences() {
     state.newPresences.forEach(updateStudentPresencesToApi)
-    state.newPresences= []
+    state.newPresences = []
+    state.students = []
+    getStudentApi()
+        .then(data => showPercentages(data))    
 } 
+function showPercentages(data) {
+    state.students = data
+    saveStatsToState()
+    calPercentage()
+    displayPercentage()
+}
 
 
 
