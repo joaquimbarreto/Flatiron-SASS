@@ -140,7 +140,7 @@ tcfs = Tcf.create([
 presences = Presence.create!([
     {
         present: true,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 1
     },
@@ -158,43 +158,43 @@ presences = Presence.create!([
     },    
     {
         present: true,  
-        late: DateTime.now,
+        late: false,
         date: DateTime.now,
         student_id: 4
     },    
     {
         present: true,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 5
     },    
     {
         present: true,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 6
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: false,
         date: DateTime.now,
         student_id: 7
     },    
     {
         present: false,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 8
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: false,
         date: DateTime.now,
         student_id: 9
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: false,
         date: DateTime.now,
         student_id: 10
     },    
@@ -206,19 +206,19 @@ presences = Presence.create!([
     },    
     {
         present: true,
-        late: DateTime.now,
+        late: false,
         date: DateTime.now,
         student_id: 12
     },    
     {
         present: true,
-        late: "",
+        late: false,
         date: DateTime.now,
         student_id: 13
     },
     {
         present: true,
-        late: "",
+        late: false,
         date: "2019-01-21",
         student_id: 1
     }    

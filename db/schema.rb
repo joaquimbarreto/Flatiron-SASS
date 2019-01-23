@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_01_22_093223) do
 
   create_table "presences", force: :cascade do |t|
     t.boolean "present"
-    t.datetime "late"
+    t.boolean "late"
     t.date "date"
     t.integer "student_id"
     t.datetime "created_at", null: false
