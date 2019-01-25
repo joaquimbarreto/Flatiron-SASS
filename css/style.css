@@ -12,6 +12,20 @@ td input {
 }
 
 .test {
-  background: #ffffff
+  background: #ffffff;
   border-bottom: #32a0c2
+}
+
+#cohort-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#new-student-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }

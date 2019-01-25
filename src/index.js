@@ -45,7 +45,10 @@ const allPresentButton = document.querySelector("#all-present-btn");
 const allSubmitButton = document.querySelector("#all-submit-btn");
 const lateTimeEl = document.querySelector(".late-time");
 const currentDateEl = document.querySelector("#current-date");
-const tableFooter = document.querySelector("tfoot")
+const tableFooter = document.querySelector("tfoot");
+const newStudentFormDiv = document.querySelector("#new-student-form");
+const addStudentBtn = document.querySelector("#add-student-btn2")
+
 
 const state = {
   students: [],

@@ -7,7 +7,7 @@ const updatePresence = presence => {
 
 document.addEventListener('click', e => {
   if (e.target.type === 'radio') {
-      const id = e.target.dataset.id
+      const id = e.target.dataset.id  
       const presence = e.target.value
 
     const newPresence = {
@@ -38,10 +38,10 @@ function updateAllPresences() {
     getStudentApi()
         .then(data => showPercentages(data))
 }
+
 function showPercentages(data) {
     state.students = data
     saveStatsToState()
     calPercentage()
     displayPercentage()
-    // tableDiv.querySelector('tfoot').style.display = "none";
 }
