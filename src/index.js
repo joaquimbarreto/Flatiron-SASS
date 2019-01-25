@@ -70,9 +70,12 @@ function hello() {
   tableDiv.style.display = "none";
   cohortNameDiv.innerText = "";
   welcomeDiv.innerHTML = `
-    <h1>Welcome to Flatiron</h1>
-    <h2>Student Attendance Score Sheet</h2>
-    <h4>Please choose a cohort above</h4>`;
+    <h1>Welcome to Flatiron's</h1>
+    <br />
+    <h2>S. A. S. S.
+    <h4>Student Attendance Score Sheet</h4>
+    <br />
+    <h3>Please choose a cohort above</h3>`;
 }  // IDEA: Add a TCF login?
 
 function dropDownCohorts() {

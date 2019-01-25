@@ -46,7 +46,7 @@ function renderAddCohortForm() {
   // e.preventDefault()
   welcomeDiv.innerHTML = "";
   newCohortEl = document.createElement("div")
-  newCohortEl.classList.add("input-group", "col-md-6", "mb-3")
+  newCohortEl.classList.add("input-group")
   newCohortEl.innerHTML = `${addCohortInput()}`
   welcomeDiv.appendChild(newCohortEl)
   let newCohortBtn = document.querySelector('#new-cohort-btn')
@@ -58,15 +58,19 @@ function renderAddCohortForm() {
   })
 }
 
-
 function saveNewCohort() {
   const newCohortName = document.querySelector('#new-cohort-input').value
-  const newCohort = {
-    name: newCohortName
+  const regex=/^[a-zA-Z]+$/;
+  if (!newCohortName.match(regex)) {
+    alert("Must input string");
+    return false;
+  } else {
+    const newCohort = {
+      name: newCohortName
+    }
+    createCohortToApi(newCohort)
+    document.getElementById('new-cohort-input').value = ""
   }
-  createCohortToApi(newCohort)
-  document.getElementById('new-cohort-input').value = ""
-
 }
 
 function renderAddStudentForm(e) {
