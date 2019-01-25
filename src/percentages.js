@@ -5,8 +5,8 @@ function saveStatsToState() {
         const daysPresent = student.presences.filter(days => days.present === true).length
         const daysAbsent = student.presences.filter(days => days.present === false).length
         const daysLate = student.presences.filter(days => days.late === true).length
-        
-        const studentStat = 
+
+        const studentStat =
             {
                 name: student.name,
                 student_id: student.id,
@@ -17,8 +17,6 @@ function saveStatsToState() {
                 totalDays: totalSchoolDays
             }
         state.stats.push(studentStat)
-
-
     })
 }
 
@@ -27,8 +25,8 @@ function calPercentage() {
         const pp = (stat.daysPresent / stat.totalDays) *100
         const lp = (stat.daysLate / stat.totalDays) *100
         const ap = (stat.daysAbsent / stat.totalDays) *100
-    
-        const studentPercentages = 
+
+        const studentPercentages =
                     {
                         name: stat.name,
                         cohort_id: stat.cohort_id,
@@ -37,7 +35,7 @@ function calPercentage() {
                         latePer: lp,
                         absentPer: ap
                     }
-    
+
         state.percentages.push(studentPercentages)
     })
 }
@@ -49,6 +47,5 @@ function displayPercentage() {
         const studentEl = document.createElement('tr');
         studentEl.innerHTML = renderPercentages(percentage)
         studentTableBody.appendChild(studentEl)
-    })     
+    })
 }
-

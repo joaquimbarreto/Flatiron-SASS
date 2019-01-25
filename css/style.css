@@ -11,3 +11,7 @@ td input {
     display: inline-block;
 }
 
+.test {
+  background: #ffffff
+  border-bottom: #32a0c2
+}
