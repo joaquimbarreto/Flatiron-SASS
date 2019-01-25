@@ -1,15 +1,9 @@
 document.addEventListener('DOMContentLoaded', init)
 
-logoDiv.addEventListener('click', hello)
+logoDiv.addEventListener('click', hello) // go back to home screen
 
-
-cohortDropDownNav.addEventListener('click', getCohortStudents)
-cohortDropDownNav.addEventListener('click', getCohort)
-
+cohortDropDownNav.addEventListener('click', handleClick)
 
 
 allPresentButton.addEventListener('click', checkAllPresent)
 allSubmitButton.addEventListener('click', updateAllPresences)
-
-
-
