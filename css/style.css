@@ -1,0 +1,45 @@
+td {
+    position: relative;
+    text-align: center;
+}
+
+.student_name {
+    text-align: left;
+}
+
+td input {
+    display: inline-block;
+}
+
+.test {
+  background: #ffffff;
+  border-bottom: #32a0c2
+}
+
+#cohort-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#new-student-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#welcome {
+    max-width: 50%;
+    text-align: center
+}
+
+#welcome > div {
+    width: 100%
+}
+
+#cohort-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
