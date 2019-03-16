@@ -60,7 +60,7 @@ function renderAddCohortForm() {
 
 function saveNewCohort() {
   const newCohortName = document.querySelector('#new-cohort-input').value
-  const regex=/^[a-zA-Z]+$/;
+  const regex=/^[A-Za-z]+(?:[ -][A-Za-z]+)*$/;
   if (!newCohortName.match(regex)) {
     alert("Must input string");
     return false;
